@@ -1,0 +1,20 @@
+{
+    "name": "apirest",
+    "version": "0.0.1",
+    "description": "Api REST FULL node y express",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon --watch index.js"
+    },
+    "author": "Jhon Leon",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mongoose": "^5.2.14"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.4"
+    }
+}
