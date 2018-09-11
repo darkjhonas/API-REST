@@ -44,7 +44,7 @@ let updateProduct = (req, res) => {
 
         res.status(200).send({product})
     })
-}
+} 
 
 let deleteProduct = id => {
     let prodctId = req.params.id;
