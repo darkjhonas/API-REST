@@ -6,7 +6,7 @@ const userCtrl = require('../controladores/auth')
 const auth = require('../middleware/auth')
 const api = express.Router();
 
-api.get('/product', ProductCtrl.getProducts)
+api.get('/product', auth, ProductCtrl.getProducts)
 api.get('/product/:id', ProductCtrl.getProduct)
 api.post('/product', ProductCtrl.saveProduct)
 api.put('/product/:id', ProductCtrl.updateProduct)

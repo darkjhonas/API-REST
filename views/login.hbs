@@ -1,0 +1,25 @@
+<form id="login" method="post">
+    <input type="email" name="email" value="" placeholder="tu@correo.com">
+    <br><br>
+    <input type="password" name="password" value="" placeholder="**********">
+    <br><br>
+    <input type="submit" value="login">
+</form>
+
+<script>
+    const  formLogin = document.querySelector('#login');
+    const formData = new FormData(formLogin);
+
+    formLogin.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch('/api/sigin', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data =>  {
+            localStorage.setItem('token', data.token)
+            console.log(data)
+        })
+    })
+</script>
